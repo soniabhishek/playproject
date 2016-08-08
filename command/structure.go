@@ -1,6 +1,7 @@
 package commands
 
 import (
+	"fmt"
 	"playment/source"
 	"strings"
 )
@@ -18,6 +19,7 @@ var (
 		"pwd":   getPwd,
 		"cd":    changeDirectory,
 		"mkdir": makeDirectory,
+		"rm":    removeDirectory,
 	}
 	Directories = []string{"/"}
 	Pwd         = "/"
@@ -87,6 +89,7 @@ func removeDirectory(arguments []string, flags map[string]string) bool {
 	if argument[len(argument)-1] != '/' {
 		argument = argument + "/"
 	}
+	fmt.Println(Directories)
 	if AlreadyExists(argument) {
 		for x, v := range Directories {
 			if v == argument {
@@ -94,6 +97,8 @@ func removeDirectory(arguments []string, flags map[string]string) bool {
 				break
 			}
 		}
+		fmt.Println(Directories)
+
 		ThrowSuccess("SUCC: DELETED")
 	} else {
 		ThrowError("Invalid Object")

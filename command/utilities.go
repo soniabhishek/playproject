@@ -8,6 +8,7 @@ import (
 func ThrowError(err string) {
 	source.Write(fmt.Sprintf("ERR: %s\n", err))
 }
+
 func ThrowSuccess(succ string) {
 	source.Write(succ + "\n")
 }
