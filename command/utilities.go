@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	"playment/source"
+	"github.com/soniabhishek/playproject/source"
 )
 
 func ThrowError(err string) {

@@ -1,14 +1,13 @@
 package main
 
 import (
-	"playment/command"
-	"playment/source"
+	"github.com/soniabhishek/playproject/command"
+	"github.com/soniabhishek/playproject/source"
 	"strings"
 )
 
 func main() {
 	//Enter your code here. Read input from STDIN. Print output to STDOUT
-
 	for source.Scanner.Scan() {
 
 		//scan a new line and send it to comand variable to check command exist or not

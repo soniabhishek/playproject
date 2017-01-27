@@ -2,8 +2,9 @@ package main
 
 import (
 	"flag"
-	"playment/command"
-	"playment/source"
+
+	"github.com/soniabhishek/playproject/source"
+	"github.com/soniabhishek/playproject/command"
 )
 
 //this init function is used for parsing flag if we provide it with a file name
